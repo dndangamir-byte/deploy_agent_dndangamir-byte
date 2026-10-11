@@ -26,3 +26,6 @@ Deploy ends by running attendance_checker.py. A successful startup proves the st
 
 ## Notes for Git Bash on Windows
 chmod 600 is not enforced on Windows file systems, but works on Linux/Mac. If zip is missing, a small Python-based zip command can be placed in ~/bin. Make sure the real Python is first in PATH, not the Microsoft Store stub.
+
+## Run-through video
+https://youtu.be/S_92UXQ9gkE
