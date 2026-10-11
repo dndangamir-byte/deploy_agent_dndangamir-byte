@@ -1,0 +1,28 @@
+# deploy_agent
+
+## How to run
+Run ./deploy_agent.sh and pick from the menu: 1) Deploy, 2) Run, 3) Archive logs, 4) Exit.
+
+## Feature 1: Deploy
+Checks python3 and zip, asks for a directory name, creates attendance_tracker_{input}/ with Helpers/ and reports/, copies files from templates/, builds the roster (Option A: copy N rows from the template. Option B: generate a fresh roster), sets permissions (chmod +x on the checker, chmod 600 on config.json), optionally updates thresholds, then runs the app to verify.
+
+## Threshold update
+You can set warning (default 75) and failure (default 50). sed edits only those two lines in Helpers/config.json without reformatting the file.
+
+## total_sessions
+Option A (4 prior sessions in the roster) uses total_sessions 5. Option B (fresh roster) uses total_sessions 1. It is always one more than the prior sessions in the roster.
+
+## Feature 2: Run
+Runs python3 attendance_checker.py inside an already deployed project.
+
+## Feature 3: Archive logs
+Moves reports/attendance.log to archives/attendance/attendance_YYYYMMDD_HHMMSS.log and reports/absent.log to archives/absent/absent_YYYYMMDD_HHMMSS.log. If a log does not exist, the script reports it and continues.
+
+## Testing Ctrl+C / Ctrl+Z
+Press Ctrl+C or Ctrl+Z during deployment. The script prints an interrupted message, zips the partial project into attendance_tracker_{input}_archive.zip (it contains whatever was created so far), removes the half-made folder, and exits cleanly.
+
+## How the deployed structure was tested
+Deploy ends by running attendance_checker.py. A successful startup proves the structure, roster and config work together.
+
+## Notes for Git Bash on Windows
+chmod 600 is not enforced on Windows file systems, but works on Linux/Mac. If zip is missing, a small Python-based zip command can be placed in ~/bin. Make sure the real Python is first in PATH, not the Microsoft Store stub.
