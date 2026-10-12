@@ -66,3 +66,7 @@ Before running the script, make sure you have:
     templates/         files copied into each new project
     README.md          this file
     .gitignore         files Git should ignore
+
+## Author
+
+Ndangamira Rwema Dylan (dndangamir-byte), African Leadership University
