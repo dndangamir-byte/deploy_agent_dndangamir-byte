@@ -39,6 +39,7 @@ deploy() {
   trap cleanup SIGINT SIGTSTP
   mkdir -p "$PROJECT/Helpers" "$PROJECT/reports"
 
+  for f in attendance_checker.py config.json; do [ -f "$TEMPLATES/$f" ] || { echo "ERROR: template $f missing."; rm -rf "$PROJECT"; PROJECT=""; return 1; }; done
   cp "$TEMPLATES/attendance_checker.py" "$PROJECT/"
   cp "$TEMPLATES/config.json" "$PROJECT/Helpers/"
   echo "Roster: A) copy from template  B) generate fresh"
