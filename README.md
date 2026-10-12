@@ -29,3 +29,17 @@ chmod 600 is not enforced on Windows file systems, but works on Linux/Mac. If zi
 
 ## Run-through video
 https://youtu.be/S_92UXQ9gkE
+
+## Usage
+
+Run the script from the project folder:
+
+    chmod +x deploy_agent.sh
+    ./deploy_agent.sh
+
+Then pick an option from the menu:
+
+1. Deploy: creates attendance_tracker_NAME from the templates
+2. Run: runs the attendance checker
+3. Archive logs: moves logs into archives/
+4. Exit
