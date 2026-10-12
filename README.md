@@ -52,3 +52,10 @@ Before running the script, make sure you have:
 - python3 installed
 - zip installed
 - The templates folder next to deploy_agent.sh
+
+## Troubleshooting
+
+- "ERROR: python3 is not installed" or "zip is not installed": install the missing tool, then run the script again.
+- "ERROR: use only letters, numbers, - and _": the directory name had spaces or special characters. Enter a simpler name.
+- "ERROR: template ... missing": the templates folder is not next to deploy_agent.sh. Check that it exists and has attendance_checker.py and config.json.
+- "already exists. Overwrite?": a project with that name exists. Type y to replace it, or anything else to abort.
