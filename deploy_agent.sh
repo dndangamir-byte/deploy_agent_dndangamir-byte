@@ -1,4 +1,6 @@
 #!/bin/bash
+# deploy_agent.sh - Creates a project from templates, runs it, and archives logs.
+# Usage: ./deploy_agent.sh
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 TEMPLATES="$SCRIPT_DIR/templates"
 PROJECT=""
