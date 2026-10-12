@@ -59,3 +59,10 @@ Before running the script, make sure you have:
 - "ERROR: use only letters, numbers, - and _": the directory name had spaces or special characters. Enter a simpler name.
 - "ERROR: template ... missing": the templates folder is not next to deploy_agent.sh. Check that it exists and has attendance_checker.py and config.json.
 - "already exists. Overwrite?": a project with that name exists. Type y to replace it, or anything else to abort.
+
+## Project Structure
+
+    deploy_agent.sh    main script with the menu
+    templates/         files copied into each new project
+    README.md          this file
+    .gitignore         files Git should ignore
