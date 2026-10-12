@@ -43,3 +43,12 @@ Then pick an option from the menu:
 2. Run: runs the attendance checker
 3. Archive logs: moves logs into archives/
 4. Exit
+
+## Prerequisites
+
+Before running the script, make sure you have:
+
+- Bash (Git Bash on Windows, or any Linux/macOS terminal)
+- python3 installed
+- zip installed
+- The templates folder next to deploy_agent.sh
