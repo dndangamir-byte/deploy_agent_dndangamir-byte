@@ -70,3 +70,7 @@ Before running the script, make sure you have:
 ## Author
 
 Ndangamira Rwema Dylan (dndangamir-byte), African Leadership University
+
+## Video
+
+Run-through video: https://youtu.be/S_92UXQ9gkE
