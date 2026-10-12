@@ -28,6 +28,7 @@ deploy() {
 
   read -p "Enter directory name: " name
   if [ -z "$name" ]; then echo "ERROR: name cannot be empty."; return 1; fi
+  if [[ ! "$name" =~ ^[A-Za-z0-9_-]+$ ]]; then echo "ERROR: use only letters, numbers, - and _."; return 1; fi
   PROJECT="attendance_tracker_$name"
   if [ -d "$PROJECT" ]; then
     read -p "$PROJECT already exists. Overwrite? (y/n): " ow
